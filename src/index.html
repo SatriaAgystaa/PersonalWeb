@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.icon8.com/vue-uikit/1.0.0/vue-uikit.css">
+</head>
+
+<body class="bg-gray-300">
+  <div class="lg:px-10 sm:px-3 py-5" style="background-color: #040812;">
+
+    <div class="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 z-10"  style="font-size: 32px;">
+      <a href="https://www.instagram.com/agyzztaa/" target="_blank" style="display: inline-block; transition: transform 300ms ease-in-out, color 300ms ease-in-out; color: #fff;" onmouseover="this.style.transform='scale(1.2)'; this.style.color='#52c2cc'" onmouseout="this.style.transform='scale(1)'; this.style.color='#fff'">
+        <i class="ri-instagram-line"></i>
+      </a>          
+      <a href="https://www.linkedin.com/in/satria-agysta-b520572a5/" target="_blank" style="display: inline-block; transition: transform 300ms ease-in-out, color 300ms ease-in-out; color: #fff;" onmouseover="this.style.transform='scale(1.2)'; this.style.color='#cf9144'" onmouseout="this.style.transform='scale(1)'; this.style.color='#fff'">
+        <i class="ri-linkedin-box-fill"></i>
+      </a>          
+      <a href="https://github.com/SatriaAgystaa" target="_blank" style="display: inline-block; transition: transform 300ms ease-in-out, color 300ms ease-in-out; color: #fff;" onmouseover="this.style.transform='scale(1.2)'; this.style.color='#52c2cc'" onmouseout="this.style.transform='scale(1)'; this.style.color='#fff'">
+        <i class="ri-github-fill"></i>
+      </a>          
+      <a href="#" style="display: inline-block; transition: transform 300ms ease-in-out, color 300ms ease-in-out; color: #fff;" onmouseover="this.style.transform='scale(1.2)'; this.style.color='#cf9144'" onmouseout="this.style.transform='scale(1)'; this.style.color='#fff'">
+        <i class="ri-twitter-x-line"></i>
+      </a>
+    </div>
+
+    <div class="text-white px-7 lg:px-10 pb-5 lg:py-5 lg:pb-10"  style="background-color: #040812;">
+      <div class="flex justify-between items-center">
+        <div class="text-2xl lg:text-3xl font-bold" style="text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);">Satria <span style="color: #52c2cc; text-shadow: 2px 2px 4px rgba(82, 194, 204, 0.5);">Agy</span><span style="color: #cf9144; text-shadow: 2px 2px 4px rgba(207, 145, 68, 0.5);">sta</span></div>
+
+        <!-- Hamburger Icon for Small Screens -->
+        <div class="lg:hidden cursor-pointer" id="navbarIcon" style="font-size: 24px;" onclick="toggleNavbar()">
+          &#9776;
+        </div>
+
+        <!-- Navbar Links -->
+        <div class="hidden lg:flex space-x-20 text-xl">
+          <a href="#home" class="nav-1" style="color: #fff; text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); transition: color 0.3s ease-in-out;" onmouseover="this.style.color='#52c2cc'" onmouseout="this.style.color='#fff'">Home</a>
+          <a href="#about" class="nav-2" style="color: #fff; text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); transition: color 0.3s ease-in-out;" onmouseover="this.style.color='#cf9144'" onmouseout="this.style.color='#fff'">About</a>
+          <a href="#portofolio" class="nav-1" style="color: #fff; text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); transition: color 0.3s ease-in-out;" onmouseover="this.style.color='#52c2cc'" onmouseout="this.style.color='#fff'">Portofolio</a>
+          <a href="#" class="nav-2" style="color: #fff; text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); transition: color 0.3s ease-in-out;" onmouseover="this.style.color='#cf9144'" onmouseout="this.style.color='#fff'">Contact</a>
+        </div>
+      </div>
+
+      <!-- Dropdown Card for Small Screens -->
+      <div class="lg:hidden mt-2" id="dropdownCard">
+        <a href="#home" class="nav-1 text-md block py-2 border-b border-gray-500" style="color: #fff; text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); transition: color 0.3s ease-in-out;" onmouseover="this.style.color='#52c2cc'" onmouseout="this.style.color='#fff'">Home</a>
+        <a href="#about" class="nav-2 text-md block py-2 border-b border-gray-500" style="color: #fff; text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); transition: color 0.3s ease-in-out;" onmouseover="this.style.color='#cf9144'" onmouseout="this.style.color='#fff'">About</a>
+        <a href="#portofolio" class="nav-1 text-md block py-2 border-b border-gray-500" style="color: #fff; text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); transition: color 0.3s ease-in-out;" onmouseover="this.style.color='#52c2cc'" onmouseout="this.style.color='#fff'">Portofolio</a>
+        <a href="#" class="nav-2 text-md block py-2 border-b border-gray-500" style="color: #fff; text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); transition: color 0.3s ease-in-out;" onmouseover="this.style.color='#cf9144'" onmouseout="this.style.color='#fff'">Contact</a>
+      </div>
+    </div>
+
+    <div id="home" class="md:grid md:grid-cols-2 lg:px-10 items-center justify-center p-7 text-white py-10" style="background-color: #040812;">
+      <div class="md:col-span-1 mb-8 md:mb-0">
+        <h2 class="py-1 text-xl md:text-2xl lg:text-3xl font-semibold" style="text-shadow: 2px 2px 4px rgba(82, 194, 204, 0.5);"> <span style="color: #52c2cc;">Hello <span class="wave-hand">👋🏻</span></span>,</h2>
+        <h1 class="py-1 text-3xl md:text-5xl lg:text-6xl font-bold" style="text-shadow: 2px 2px 4px rgba(82, 194, 204, 0.5);">I'm <span style="color: #52c2cc;">Satria</span> <span style="color: #cf9144; text-shadow: 2px 2px 4px rgba(207, 145, 68, 0.5);">Agysta</span></h1>
+        <h2 class="py-1 text-md md:text-lg lg:text-xl font-semibold text-gray-400 flex gap-1" style="text-shadow: 2px 2px 4px rgba(82, 194, 204, 0.5);">I Focus on <p id="dynamicText" class="text-white"></p></h2>
+        <p class="text-sm md:text-base lg:text-lg text-gray-400" style="text-shadow: 2px 2px 4px rgba(82, 194, 204, 0.5);">Designing a Website is interesting, <span class="text-white font-semibold">isn't it?</span></p>
+        <div class="py-5">
+          <a class="px-3 py-2 lg:px-5 lg:text-md lg:py-2 md:py-2 font-semibold text-white rounded-lg text-sm inline-block" style="background-color: #cf9144; box-shadow: 0 0 10px rgba(207, 145, 68, 0.5);" href="#">Download CV</a>
+        </div>
+      </div>
+    
+      <div class="md:col-span-1">
+        <div class="relative rounded-lg mx-auto mb-8" style="height: auto; width: 80vw; max-width: 400px;">
+          <div class="img-container z-5 rounded-xl">
+            <img src="anime1.jpg" class="w-full relative" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="about" class="flex flex-col md:flex-row text-white px-7 py-10 gap-5 lg:px-10">
+      <!-- Bagian Pertama -->
+      <div class="md:w-1/2">
+        <div>
+          <h1 class="text-2xl md:text-xl lg:text-3xl font-semibold">
+            <span class="underline-animation-1 p-1" style="text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);">About <span style="color: #cf9144; text-shadow: 2px 2px 4px rgba(207, 145, 68, 0.5);">Me</span></span>
+          </h1>       
+        </div>
+        <div class="relative rounded-lg mx-auto" style="height: auto; width: 87.5vw; max-width: 450px;">
+          <div class="image-about z-10 rounded-xl relative">
+            <img src="sat.png" class="w-full relative" alt="">
+          </div>
+          <svg viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" class="absolute top-0 left-0 w-full h-full z-1" style="filter: drop-shadow(0 0 10px #52C2CC);">
+            <path fill="#52C2CC" d="M43.3,-78.2C54.1,-68.7,59.7,-53.2,58.5,-39.1C57.2,-25.1,49.3,-12.5,50.3,0.6C51.3,13.7,61.4,27.5,57.2,32.2C53,36.9,34.7,32.6,22.8,42.1C10.9,51.7,5.4,75.2,-3.2,80.7C-11.7,86.1,-23.5,73.6,-36.2,64.4C-48.9,55.3,-62.5,49.6,-72.7,39.5C-82.9,29.3,-89.7,14.7,-88.5,0.7C-87.4,-13.3,-78.2,-26.6,-65,-31.5C-51.7,-36.3,-34.3,-32.8,-22.8,-41.9C-11.2,-51.1,-5.6,-72.9,5.3,-82.1C16.2,-91.3,32.4,-87.7,43.3,-78.2Z" transform="translate(100 100)" />
+          </svg>
+          <svg viewBox="0 0 190 190" xmlns="http://www.w3.org/2000/svg" class="absolute top-0 right-0 w-full h-full z-1" style="filter: drop-shadow(0 0 10px #CF9144);">
+            <path fill="#CF9144" d="M11.5,-29.7C16.3,-17.1,22.7,-16.9,36.7,-14C50.8,-11.2,72.7,-5.6,81.5,5.1C90.3,15.7,86,31.5,77.4,43.7C68.7,56,55.6,64.8,41.9,63.2C28.3,61.7,14.1,49.9,4.1,42.8C-6,35.8,-12.1,33.6,-17.4,30.3C-22.7,27.1,-27.4,22.8,-39,17.5C-50.7,12.3,-69.4,6.2,-78.3,-5.1C-87.2,-16.4,-86.3,-32.9,-76.9,-42C-67.5,-51.2,-49.6,-53.1,-35.4,-60.3C-21.2,-67.4,-10.6,-79.8,-3.6,-73.6C3.3,-67.3,6.7,-42.3,11.5,-29.7Z" transform="translate(100 100)" />
+          </svg>
+        </div>        
+        <div>
+          <p class="text-xl text-gray-200">Hello, My name is <span style="color: #52c2cc; text-shadow: 2px 2px 4px rgba(82, 194, 204, 0.5);">Satria</span> <span style="color: #cf9144; text-shadow: 2px 2px 4px rgba(207, 145, 68, 0.5);">Agysta</span> . You can call me <span style="color: #52c2cc; text-shadow: 2px 2px 4px rgba(82, 194, 204, 0.5);">Satria</span>. I am sixteen years old, live in <span style="color: #cf9144; text-shadow: 2px 2px 4px rgba(207, 145, 68, 0.5);">Bogor</span>. My hobbies are playing <span style="color: #52c2cc; text-shadow: 2px 2px 4px rgba(82, 194, 204, 0.5);">Games</span> and <span style="color: #cf9144; text-shadow: 2px 2px 4px rgba(207, 145, 68, 0.5);">Drawing</span>. My favorite food is noodles. I'm trying to be the best.</p>
+        </div>
+      </div>
+    
+      <!-- Bagian Kedua -->
+      <div class="md:w-1/2">
+        <div class="pb-7">
+          <p class="underline-animation-2 p-1 text-2xl lg:text-3xl font-semibold" style="text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);">More <span style="color: #52c2cc; text-shadow: 2px 2px 4px rgba(82, 194, 204, 0.5);">About</span> <span style="color: #cf9144; text-shadow: 2px 2px 4px rgba(207, 145, 68, 0.5);">Me</span></p>
+        </div>
+        <div class="pb-7">
+          <h2 class="font-semibold text-3xl lg:text-4xl"><i>Come on, let's take a look and find out more about <span style="color: #52c2cc; text-shadow: 2px 2px 4px rgba(82, 194, 204, 0.5);">Satria</span> <span style="color: #cf9144; text-shadow: 2px 2px 4px rgba(207, 145, 68, 0.5);">Agysta</span>!!</i></h2>
+        </div>
+        <div class="pb-7">
+          <p class="text-xl" id="description">
+            I am a student at
+            <span style="text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);">SMK</span>
+            <span style="color: #52c2cc; text-shadow: 2px 2px 4px rgba(82, 194, 204, 0.5);">Wikrama</span>
+            <span style="color: #cf9144; text-shadow: 2px 2px 4px rgba(207, 145, 68, 0.5);">Bogor</span>
+            and have a strong determination to pursue a major in software and game development.
+            Currently, I am specifically focusing on Front-end, having understood various JavaScript and PHP syntaxes.
+            <span class="hidden-text">My learning journey also included implementing Vue.js for static website development
+              and mastering Laravel as a PHP framework. Through my experience in creating various website projects,
+              my understanding of the world of software development has become more detailed. I consider the importance
+              of collaboration in a dedicated team, as this plays a big role in creating innovative products.</span>
+            My vision is not only limited to creating useful products, but also to improving the overall user experience.
+          </p>
+          <button class="nav-1 text-xl" onclick="toggleHiddenText()" style="text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);">View More....</button>
+        </div>
+        <div class="pb-7 flex flex-col md:flex-row">
+          <ul class="md:w-1/2"> <!-- Bagian kiri (setengah lebar pada tampilan desktop) -->
+            <li class="mb-5 text-lg lg:text-xl"><span class="font-semibold" style="color: #52c2cc; text-shadow: 2px 2px 4px rgba(82, 194, 204, 0.5);">Age</span> : 16 y.o</li>
+            <li class="mb-5 text-lg lg:text-xl"><span class="font-semibold" style="color: #cf9144; text-shadow: 2px 2px 4px rgba(207, 145, 68, 0.5); ">Date of birth </span> : 22 August 2007</li>
+            <li class="mb-5 text-lg lg:text-xl"><span class="font-semibold" style="color: #52c2cc; text-shadow: 2px 2px 4px rgba(82, 194, 204, 0.5);">Place of birth</span> : Depok</li>
+          </ul>
+          <ul class="md:w-1/2"> <!-- Bagian kanan (setengah lebar pada tampilan desktop) -->
+            <li class="mb-5 text-lg lg:text-xl"><span class="font-semibold" style="color: #52c2cc; text-shadow: 2px 2px 4px rgba(82, 194, 204, 0.5);">Email</span> : agystasatria@gmail.com</li>
+            <li class="mb-5 text-lg lg:text-xl"><span class="font-semibold" style="color: #cf9144; text-shadow: 2px 2px 4px rgba(207, 145, 68, 0.5);">Address</span> : Cigombong, Bogor</li>
+            <li class="text-lg lg:text-xl"><span class="font-semibold" style="color: #52c2cc; text-shadow: 2px 2px 4px rgba(82, 194, 204, 0.5);">Phone Number</span> : (+62) 857-1038-6045</li>
+          </ul>
+        </div>       
+      </div>
+    </div>
+  </div>
+
+  <div class="px-7 py-10 lg:px-10 lg:mx-auto" style="background-color: #040812;">
+    <div class="grid gap-8 text-white py-10">
+        <div class="text-center pb-10">
+            <h2 class="text-xl font-semibold pb-2" style="color: #52c2cc; text-shadow: 2px 2px 4px rgba(82, 194, 204, 0.5);">Skills</h2>
+            <h1 class="text-3xl lg:text-5xl font-bold pb-2">Language & Tech Stack</h1>
+            <p class="text-gray-500 text-lg">These are some of the programming languages ​​that I have used in my studies at vocational school level</p>
+        </div>
+        <div class="flex flex-wrap gap-10 justify-center">
+          <div class="icon-wrapper">
+            <img src="/img/logo/laravel-2.svg" alt="Laravel Logo" width="100" height="100">
+          </div>
+          <div class="icon-wrapper">
+            <img src="/img/logo/html-1.svg" alt="HTML Logo" width="100" height="100">
+          </div>
+          <div class="icon-wrapper">
+            <img src="/img/logo/css-3.svg" alt="CSS Logo" width="100" height="100">
+          </div>
+          <div class="icon-wrapper">
+            <img src="/img/logo/logo-javascript.svg" alt="JavaScript Logo" width="100" height="100">
+          </div>
+          <div class="icon-wrapper">
+            <img src="/img/logo/tailwind-css-2.svg" alt="Tailwind CSS Logo" width="100" height="100">
+          </div>
+          <div class="icon-wrapper">
+            <img src="/img/logo/vue-9.svg" alt="Vue.js Logo" width="100" height="100">
+          </div>
+          <div class="icon-wrapper">
+            <img src="/img/logo/git-icon.svg" alt="Git Logo" width="100" height="100">
+          </div>
+          <div class="icon-wrapper">
+            <img src="/img/logo/github-icon-1.svg" alt="GitHub Logo" width="100" height="100">
+          </div>
+          <div class="icon-wrapper">
+            <img src="/img/logo/bootstrap-4.svg" alt="Bootstrap Logo" width="100" height="100">
+          </div>
+          <div class="icon-wrapper">
+            <img src="/img/logo/mysql-logo.svg" alt="MySQL Logo" width="100" height="100">
+          </div>
+          <div class="icon-wrapper">
+            <img src="/img/logo/figma-5.svg" alt="Figma Logo" width="100" height="100">
+          </div>
+          <div class="icon-wrapper">
+            <img src="/img/logo/php-1.svg" alt="PHP Logo" width="100" height="100">
+          </div>
+        </div>
+        
+    </div>
+</div>
+
+  <div id="portofolio" class="lg:px-10 px-7 sm:px-5 py-5 text-white" style="background-color: #040a12;">
+    <div class="text-center pb-10">
+        <h2 class="text-xl font-semibold pb-2" style="color: #52c2cc; text-shadow: 2px 2px 4px rgba(82, 194, 204, 0.5);">Portofolio</h2>
+        <h1 class="text-3xl lg:text-5xl font-bold pb-2">My <span style="color: #cf9144; text-shadow: 2px 2px 4px rgba(207, 145, 68, 0.5);">Project</span></h1>
+        <p class="text-gray-500 text-lg">The project below is a project that I have worked on in the PPLG department.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mx-auto max-w-screen-2xl pb-10 lg:px-10">
+        <div class="group-container flex flex-wrap gap-8">
+            <div class="rounded-lg overflow-hidden">
+                <img class="rounded-lg transform transition-transform duration-300 ease-in-out hover:scale-105" src="apotek.jpeg" alt="Apotek App">
+                <div class="flex flex-col py-4">
+                    <h1 class="text-2xl font-semibold">Apotek App</h1>
+                    <p class="text-gray-500">Belajar membuat website apotek menggunakan</p>
+                    <div class="flex gap-3 items-center overflow-x-auto">
+                      <img src="/img/logo/laravel-2.svg" alt="Laravel Logo" width="40" height="40">
+                      <img src="/img/logo/html-1.svg" alt="Laravel Logo" width="40" height="40">
+                      <img src="/img/logo/css-3.svg" alt="Laravel Logo" width="40" height="40">
+                      <img src="/img/logo/logo-javascript.svg" alt="Laravel Logo" width="40" height="40">
+                      <img src="/img/logo/bootstrap-4.svg" alt="Laravel Logo" width="40" height="40">
+                    </div>
+                </div>
+            </div>
+
+            <div class="rounded-lg overflow-hidden">
+              <img class="rounded-lg transform transition-transform duration-300 ease-in-out hover:scale-105" src="vue.png" alt="Apotek App">  
+              <div class="flex flex-col py-4">
+                    <h1 class="text-2xl font-semibold">Responsive Website</h1>
+                    <p class="text-gray-500">Belajar membuat website responsive menerapkan API dan menggunakan</p>
+                    <div class="flex gap-3 items-center overflow-x-auto">
+                      <img src="/img/logo/laravel-2.svg" alt="Laravel Logo" width="40" height="40">
+                      <img src="/img/logo/html-1.svg" alt="Laravel Logo" width="40" height="40">
+                      <img src="/img/logo/css-3.svg" alt="Laravel Logo" width="40" height="40">
+                      <img src="/img/logo/logo-javascript.svg" alt="Laravel Logo" width="40" height="40">
+                      <img src="/img/logo/vue-9.svg" alt="Laravel Logo" width="40" height="40">
+                      <img src="/img/logo/bootstrap-4.svg" alt="Laravel Logo" width="40" height="40">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="group-container flex flex-wrap gap-8">
+            <div class="rounded-lg overflow-hidden">
+                <img class="rounded-lg transform transition-transform duration-300 ease-in-out hover:scale-105" src="rekap.jpg" alt="Apotek App">
+                <div class="flex flex-col py-4">
+                    <h1 class="text-2xl font-semibold">Rekapitulasi Keterlambatan</h1>
+                    <p class="text-gray-500">Belajar membuat website Rekapitulasi Keterlambatan menggunakan <b><a href="https://github.com/SatriaAgystaa/AppsRekapSatria.git" target="_blank">(Click here to go to GitHub)</a></b></p>
+                    <div class="flex gap-3 items-center overflow-x-auto">
+                      <img src="/img/logo/laravel-2.svg" alt="Laravel Logo" width="40" height="40">
+                      <img src="/img/logo/html-1.svg" alt="Laravel Logo" width="40" height="40">
+                      <img src="/img/logo/css-3.svg" alt="Laravel Logo" width="40" height="40">
+                      <img src="/img/logo/logo-javascript.svg" alt="Laravel Logo" width="40" height="40">
+                      <img src="/img/logo/tailwind-css-2.svg" alt="Laravel Logo" width="40" height="40">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+  </div>
+
+
+<div id="portofolio" class="lg:px-10 px-7 sm:px-5 py-5 text-white" style="background-color: #040a12;">
+  <div class="text-center pb-10">
+      <h2 class="text-xl font-semibold pb-2" style="color: #52c2cc; text-shadow: 2px 2px 4px rgba(82, 194, 204, 0.5);">E Certificate</h2>
+      <h1 class="text-3xl lg:text-5xl font-bold pb-2">My <span style="color: #cf9144; text-shadow: 2px 2px 4px rgba(207, 145, 68, 0.5);">Certificate</span></h1>
+      <p class="text-gray-500 text-lg">The project below is a project that I have worked on in the PPLG department.</p>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mx-auto max-w-screen-2xl pb-10 lg:px-10">
+      <div class="group-container flex flex-wrap gap-8">
+          <div class="rounded-lg overflow-hidden">
+              <img class="rounded-lg transform transition-transform duration-300 ease-in-out hover:scale-105" src="Satria Agysta-TTD.png" alt="Apotek App">
+              <div class="flex flex-col py-4">
+                  <h1 class="text-2xl font-semibold">PT CyberLabs</h1>
+                  <p class="text-gray-500">Sertifikat ini didapat setelah saya melaksanakan pembelajaran bersama PT CyberLabs</p>
+                  <div class="flex gap-3 items-center overflow-x-auto">
+                  </div>
+              </div>
+          </div>
+
+          <div class="rounded-lg overflow-hidden">
+            <img class="rounded-lg transform transition-transform duration-300 ease-in-out hover:scale-105" src="Satria Agysta.jpg" alt="Apotek App">  
+            <div class="flex flex-col py-4">
+                  <h1 class="text-2xl font-semibold">PT WANTEKNOLOGI</h1>
+                  <p class="text-gray-500">Sertifikat ini didapat setelah saya melaksanakan pembelajaran bersama PT WANTEKNOLOGI</p>
+                  <div class="flex gap-3 items-center overflow-x-auto">
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="group-container flex flex-wrap gap-8">
+          <div class="rounded-lg overflow-hidden">
+              <img class="rounded-lg transform transition-transform duration-300 ease-in-out hover:scale-105" src="serti1.png" alt="Apotek App">
+              <div class="flex flex-col py-4">
+                  <h1 class="text-2xl font-semibold">Belajar Membuat Front-End Web untuk Pemula</h1>
+                  <p class="text-gray-500">Sertifikat ini di dapatkan setelah melaksanakan modul pembelajaran Belajar Membuat Front-End Web untuk Pemula pada dicoding</p>
+                  <div class="flex gap-3 items-center overflow-x-auto">
+                  </div>
+              </div>
+          </div>
+
+          <div class="rounded-lg overflow-hidden">
+              <img class="rounded-lg transform transition-transform duration-300 ease-in-out hover:scale-105" src="serti2.png" alt="Apotek App">
+              <div class="flex flex-col py-4">
+                  <h1 class="text-2xl font-semibold">Memulai Pemrograman dengan Python</h1>
+                  <p class="text-gray-500">Sertifikat ini di dapatkan setelah melaksanakan modul pembelajaran Memulai Pemrograman dengan Python pada dicoding</p>
+                  <div class="flex gap-3 items-center overflow-x-auto">
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="group-container flex flex-wrap gap-8">
+          <div class="rounded-lg overflow-hidden">
+              <img class="rounded-lg transform transition-transform duration-300 ease-in-out hover:scale-105" src="serti3.png" alt="Apotek App">
+              <div class="flex flex-col py-4">
+                  <h1 class="text-2xl font-semibold">Belajar Dasar SQL</h1>
+                  <p class="text-gray-500">Sertifikat ini di dapatkan setelah melaksanakan modul pembelajaran Belajar Dasar SQL pada dicoding</p>
+                  <div class="flex gap-3 items-center overflow-x-auto">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+  <div class="px-7 py-10 lg:px-10" style="background-color: #040a12;">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 text-white py-10 lg:px-10">
+      <!-- Section 1: Contact Information -->
+      <div class="col-span-1">
+        <h1 class="text-3xl font-bold pb-4" style="color: #52c2cc; text-shadow: 2px 2px 4px rgba(82, 194, 204, 0.5);">AGYZTA</h1>
+        <h2 class="text-2xl font-bold pb-3">Contact Me</h2>
+        <p class="text-lg" style="text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);">agystasatria@gmail.com</p>
+        <p class="text-lg">Desa Cisalada, Kec. Cigombong, Kabupaten Bogor, Jawa Barat, Indonesia</p>
+      </div>
+  
+      <!-- Section 2: Contact Info -->
+      <div class="col-span-1">
+        <h1 class="text-2xl font-semibold pb-5" style="color: #cf9144; text-shadow: 2px 2px 4px rgba(207, 145, 68, 0.5);">Contact Info</h1>
+        <div class="flex items-center" style="text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);">
+          <i class="ri-whatsapp-line" style="font-size: 28px;"></i>
+          <a href="tel:085710386045" class="text-lg ml-2">085710386045</a>
+        </div>
+        <div class="flex items-center" style="text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);">
+          <i class="ri-mail-line" style="font-size: 28px;"></i>
+          <a href="mailto:agystasatria@gmail.com" class="text-lg ml-2">agystasatria@gmail.com</a>
+        </div>
+        <div class="flex items-center" style="text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);">
+          <i class="ri-map-pin-2-line" style="font-size: 28px;"></i>
+          <a href="#" class="text-lg ml-2">Cigombong, Bogor, Indonesia</a>
+        </div>
+      </div>
+  
+      <!-- Section 3: Pages -->
+      <div class="col-span-1 grid lg:mt-0 mt-6 lg:ml-6">
+        <h1 class="text-2xl font-semibold pb-5" style="text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);">Pages</h1>
+        <a href="#home" class="nav-1 text-lg pb-1 block lg:inline-block">Home</a>
+        <a href="#about" class="nav-2 text-lg pb-1 block lg:inline-block">About</a>
+        <a href="#portofolio" class="nav-1 text-lg pb-1 block lg:inline-block">Portfolio</a>
+        <a href="#" class="nav-2 text-lg pb-1 block lg:inline-block">Contact</a>
+      </div>
+    </div>
+  
+    <div class="lg:px-10">
+      <hr>
+    </div>
+  </div>
+
+    
+
+
+
+  <script>
+
+    function toggleNavbar() {
+      var dropdownCard = document.getElementById("dropdownCard");
+      dropdownCard.classList.toggle("hidden");
+    }
+
+    const textOptions = [
+      "Front End Developer",
+      "Web Development",
+      "UI UX Designer",
+      "Design Graphic"
+    ];
+
+    let textIndex = 0;
+    const textElement = document.getElementById('dynamicText');
+
+    function animateText() {
+      textElement.textContent = "";
+      const currentText = textOptions[textIndex];
+      let charIndex = 0;
+
+      function type() {
+        if (charIndex < currentText.length) {
+          textElement.textContent += currentText.charAt(charIndex);
+          charIndex++;
+          setTimeout(type, 50);
+        } else {
+          setTimeout(changeText, 1000);
+        }
+      }
+
+      function changeText() {
+        textIndex = (textIndex + 1) % textOptions.length;
+        animateText();
+      }
+
+      type();
+    }
+
+    animateText();
+
+    function toggleHiddenText() {
+      var hiddenText = document.querySelector('.hidden-text');
+      var button = document.querySelector('button');
+  
+      hiddenText.classList.toggle('visible');
+  
+      if (hiddenText.classList.contains('visible')) {
+        button.innerHTML = 'Show Less....';
+      } else {
+        button.innerHTML = 'View More....';
+      }
+    }
+  </script>
+
+  <style>
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+    
+      ::-webkit-scrollbar-thumb {
+        background-color: #040D12;
+        border-radius: 4px;
+      }
+    
+      ::-webkit-scrollbar-track {
+        background-color: #0f0f0f;
+      }    
+
+    .nav-1,
+    .nav-2 {
+      position: relative;
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .nav-1::before,
+    .nav-2::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      transition: width 0.3s ease-in-out;
+    }
+
+    .nav-1::before {
+      background-color: #52c2cc;
+    }
+
+    .nav-2::before {
+      background-color: #cf9144;
+    }
+
+    .nav-1:hover,
+    .nav-2:hover {
+      color: inherit; /* Jangan lupa tambahkan ini agar efek glow tidak mempengaruhi warna teks */
+    }
+
+    .nav-1:hover::before,
+    .nav-2:hover::before {
+      width: 100%;
+      box-shadow: 0 0 10px rgba(82, 194, 204, 0.7); /* Sesuaikan warna dan ukuran shadow glow */
+    }
+
+    .nav-2:hover::before {
+      box-shadow: 0 0 10px rgba(207, 145, 68, 0.7); /* Sesuaikan warna dan ukuran shadow glow untuk .nav-2 */
+    }
+
+    .hidden-text {
+      display: none;
+    }
+  
+    .visible {
+      display: inline;
+    }
+
+    @keyframes floatUpDown {
+      0%, 100% {
+        transform: translateY(0) rotate(5deg);
+      }
+      50% {
+        transform: translateY(-10px) rotate(5deg);
+      }
+    }
+    
+    .img-container {
+      position: relative;
+      overflow: hidden;
+      filter: grayscale(40%);
+      transition: filter 0.3s ease-in-out, transform 1s ease-in-out;
+      animation: floatUpDown 2s ease-in-out infinite;
+      box-shadow: 0 0 20px rgba(16, 226, 245, 1);
+      border: 2px solid rgba(16, 226, 245, 0.5);
+    }   
+
+    .typing-text {
+      overflow: hidden;
+      border-right: 0.15em solid orange;
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: 0.15em;
+      animation: typing 2s steps(30, end), blink-caret 0.5s step-end infinite;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+    }
+
+    @keyframes blink-caret {
+      from, to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: orange;
+      }
+    }
+
+    @keyframes wave {
+      0%, 100% {
+        transform: rotate(0deg);
+      }
+      20%, 60% {
+        transform: rotate(-20deg);
+      }
+      40%, 80% {
+        transform: rotate(20deg);
+      }
+    }
+
+    .wave-hand {
+      display: inline-block;
+      animation: wave 2s ease-in-out infinite;
+      font-size: 1.2em;
+      margin-right: 5px;
+    }
+
+    .underline-animation-1 {
+      position: relative;
+      text-decoration: none;
+      color: inherit;
+      overflow: hidden;
+      display: inline-block;
+    }
+    
+    .underline-animation-1::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2.5px;
+      bottom: 0;
+      left: 0;
+      background-color: #52c2cc;
+      border-radius: 10px; /* Tambahkan border radius sesuai keinginan */
+      transform: translateX(-100%);
+      animation: underline 1.5s infinite linear, glow 1.5s infinite linear; /* Tambahkan animasi glow */
+    }
+
+    .underline-animation-2 {
+      position: relative;
+      text-decoration: none;
+      color: inherit;
+      overflow: hidden;
+      display: inline-block;
+    }
+    
+    .underline-animation-2::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2.5px;
+      bottom: 0;
+      left: 0;
+      background-color: #cf9144;
+      border-radius: 10px; /* Tambahkan border radius sesuai keinginan */
+      transform: translateX(-100%);
+      animation: underline 1.5s infinite linear, glow 1.5s infinite linear; /* Tambahkan animasi glow */
+    }
+    
+    @keyframes underline {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+    
+    .image-about {
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      z-index: 10;
+      filter: grayscale(30%);
+    }
+    
+    .image-about img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 300ms ease-in-out; /* Transisi dengan ease-in-out selama 300ms */
+    }
+    
+    .image-about:hover img {
+      transform: scale(1.1);
+    }
+    
+    .image-about::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(82, 194, 204, 0); /* Warna glow (dalam hal ini transparan) */
+      border-radius: 15px; /* Sesuaikan border radius sesuai keinginan */
+      transition: background-color 300ms ease-in-out; /* Transisi dengan ease-in-out selama 300ms */
+      z-index: -1;
+    }
+
+    .icon-wrapper {
+      position: relative;
+      overflow: hidden;
+      filter: grayscale(100%); /* Menerapkan efek desaturasi (greyscale) pada gambar */
+      transition: filter 0.3s ease; /* Animasi transisi untuk perubahan filter */
+    }
+  
+    .icon-wrapper:hover {
+      filter: grayscale(0%); /* Menghapus efek desaturasi saat kursor mengarah ke gambar */
+    }
+  
+    .icon-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+      opacity: 0; /* Menyembunyikan teks secara default */
+      transition: opacity 0.3s ease; /* Animasi transisi untuk perubahan opasitas */
+    }
+  
+    .icon-wrapper:hover .icon-text {
+      opacity: 1; /* Memunculkan teks saat kursor mengarah ke gambar */
+    }
+    
+  </style>
+
+</body>
+
+</html>
